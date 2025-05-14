@@ -8,6 +8,7 @@ public class ArrayAppl {
         System.out.println(sumArray(Arr));
         System.out.println(avgArray(Arr));
         System.out.println(max(Arr));
+        System.out.println(searchFirst(Arr,4));
         printArray(search(Arr,4));
 
     }
@@ -40,6 +41,15 @@ public class ArrayAppl {
         for (int i=0;i<Arr.length;i++){
             Arr[i] = (int) (from + Math.random()*(to-from+1));
         }
+    }
+
+    public static int searchFirst(int[] Arr,int value){
+        for (int i=0;i<Arr.length;i++){
+            if(Arr[i]==value){
+                return i;
+            }
+        }
+        return -1;
     }
 
     public static int[] search(int[] Arr,int value){
